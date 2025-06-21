@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Cart | Versewell</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <style>
+        body { background: var(--background, #f3e5d0); }
+        .cart-container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px #b6862c33;
+            padding: 2rem;
+        }
+        .cart-container h2 {
+            text-align: center;
+            color: var(--dark-color, #4e2e0e);
+            margin-bottom: 2rem;
+        }
+        .cart-list {
+            list-style: none;
+            padding: 0;
+        }
+        .cart-list li {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            padding: 1rem 0;
+        }
+        .cart-list img {
+            width: 60px;
+            height: 90px;
+            object-fit: cover;
+            margin-right: 1rem;
+            border-radius: 4px;
+            border: 1px solid #eee;
+        }
+        .cart-title {
+            flex: 1;
+            font-size: 1.2rem;
+            color: var(--black, #2d1a06);
+        }
+        .cart-price {
+            color: var(--orange, #b6862c);
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+        .remove-btn {
+            background: var(--orange, #b6862c);
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 0.3rem 0.7rem;
+            cursor: pointer;
+        }
+        .empty-cart {
+            text-align: center;
+            color: #888;
+            margin: 2rem 0;
+        }
+        .checkout-btn {
+            display: block;
+            width: 100%;
+            background: var(--dark-color, #4e2e0e);
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 1rem;
+            font-size: 1.1rem;
+            margin-top: 2rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="cart-container">
+        <button onclick="window.location.href='html.php'"  style="margin-bottom: 1.5rem; background: var(--orange,#b6862c); color: #fff; border: none; border-radius: 4px; padding: 0.7rem 1.2rem; cursor: pointer;">
+            &#8592; Back to Main Page
+        </button>
+        <h2>Your Cart</h2>
+        <ul class="cart-list" id="cart-list"></ul>
+        <div class="empty-cart" id="empty-cart" style="display:none;">Your cart is empty.</div>
+        <button class="checkout-btn"="checkout()" id="checkout-btn"></button>
+        <button id="proceed-checkout" class="btn" style="margin-top:20px;">Proceed to Checkout</button>
+    </div>
+    <script>
+        // Load cart from localStorage
+        function loadCart() {
+            let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+            let cartList = document.getElementById('cart-list');
+            let emptyCart = document.getElementById('empty-cart');
+            let checkoutBtn = document.getElementById('checkout-btn');
+            cartList.innerHTML = '';
+            if(cart.length === 0) {
+                emptyCart.style.display = 'block';
+                checkoutBtn.style.display = 'none';
+            } else {
+                emptyCart.style.display = 'none';
+                checkoutBtn.style.display = 'block';
+                cart.forEach((item, idx) => {
+                    cartList.innerHTML += `
+                        <li>
+                            <img src="${item.img}" alt="${item.title}">
+                            <span class="cart-title">${item.title}</span>
+                            <span class="cart-price">₹${item.price}</span>
+                            <button class="remove-btn" onclick="removeFromCart(${idx})">Remove</button>
+                        </li>
+                    `;
+                });
+            }
+        }
+
+        function removeFromCart(idx) {
+            let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+            cart.splice(idx, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            loadCart();
+        }
+
+        function checkout() {
+            alert('Checkout functionality coming soon!');
+        }
+
+        // Load cart on page load
+        loadCart();
+    </script>
+    <script>
+        document.getElementById('proceed-checkout').addEventListener('click', function() {
+            window.location.href = 'checkout.php';
+        });
+    </script>
+</body>
+</html>
