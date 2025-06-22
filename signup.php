@@ -62,35 +62,37 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up - VerseWell</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css"> <!-- Link to your main style.css -->
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            background: var(--background); /* Use CSS variable */
+            color: var(--text-color); /* Use CSS variable */
         }
         .container {
-            background-color: white;
+            background: var(--heading-background); /* Use CSS variable */
             border-radius: 8px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--box-shadow); /* Use CSS variable */
             padding: 30px;
             width: 100%;
             max-width: 400px;
         }
         h1 {
             text-align: center;
-            color: #333;
+            color: var(--text-color); /* Use CSS variable */
             margin-bottom: 30px;
         }
         .logo {
             text-align: center;
             margin-bottom: 20px;
             font-size: 24px;
-            color: #4a6fa5;
+            color: var(--orange); /* Use CSS variable */
         }
         .form-group {
             margin-bottom: 20px;
@@ -99,20 +101,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             display: block;
             margin-bottom: 5px;
             font-weight: bold;
-            color: #555;
+            color: var(--text-color); /* Use CSS variable */
         }
         input {
             width: 100%;
             padding: 10px;
-            border: 1px solid #ddd;
+            border: var(--border); /* Use CSS variable */
             border-radius: 4px;
             font-size: 16px;
             box-sizing: border-box;
+            background: var(--search-background); /* Use CSS variable */
+            color: var(--text-color); /* Use CSS variable */
         }
         button {
             width: 100%;
             padding: 12px;
-            background-color: #4a6fa5;
+            background-color: var(--orange); /* Use CSS variable */
             color: white;
             border: none;
             border-radius: 4px;
@@ -121,15 +125,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             transition: background-color 0.3s;
         }
         button:hover {
-            background-color: #3a5a80;
+            background-color: var(--dark-color); /* Use CSS variable */
         }
         .error {
-            color: #e74c3c;
+            color: #e74c3c; /* Keep specific error color, or map to theme's error color */
             margin-bottom: 15px;
             text-align: center;
         }
         .success {
-            color: #2ecc71;
+            color: #2ecc71; /* Keep specific success color, or map to theme's success color */
             margin-bottom: 15px;
             text-align: center;
         }
@@ -138,7 +142,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             margin-top: 20px;
         }
         .login-link a {
-            color: #4a6fa5;
+            color: var(--orange); /* Use CSS variable */
             text-decoration: none;
         }
         .login-link a:hover {
@@ -199,5 +203,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             Already have an account? <a href="login.php">Log in</a>
         </div>
     </div>
+
+    <script>
+        // Dark Mode Functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const htmlElement = document.documentElement; // This is the <html> tag
+
+            // Check for saved theme preference in local storage
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                htmlElement.setAttribute('data-theme', savedTheme);
+            } else {
+                // Default to light theme if no preference is saved
+                htmlElement.setAttribute('data-theme', 'light');
+            }
+        });
+    </script>
 </body>
 </html>

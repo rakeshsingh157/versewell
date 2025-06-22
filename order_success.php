@@ -32,26 +32,29 @@ $items = $stmt->fetchAll();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order Confirmation - Versewell</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f5f5f5;
+            background-color: var(--background); /* Use CSS variable */
+            color: var(--text-color); /* Use CSS variable */
         }
         
         .success-container {
             max-width: 800px;
             margin: 50px auto;
-            background: #fff;
+            background: var(--heading-background); /* Use CSS variable */
             padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--box-shadow); /* Use CSS variable */
             text-align: center;
         }
         
         .success-icon {
-            color: #4CAF50;
+            color: #4CAF50; /* Specific green for success, can be a variable if needed */
             font-size: 4rem;
             margin-bottom: 20px;
         }
@@ -59,13 +62,13 @@ $items = $stmt->fetchAll();
         .success-title {
             font-size: 2rem;
             margin-bottom: 15px;
-            color: #333;
+            color: var(--text-color); /* Use CSS variable */
         }
         
         .order-details {
             margin: 30px 0;
             text-align: left;
-            border: 1px solid #eee;
+            border: var(--border); /* Use CSS variable */
             padding: 20px;
             border-radius: 6px;
         }
@@ -75,7 +78,7 @@ $items = $stmt->fetchAll();
             align-items: center;
             margin-bottom: 15px;
             padding-bottom: 15px;
-            border-bottom: 1px solid #f5f5f5;
+            border-bottom: 1px solid var(--light-border); /* Use CSS variable */
         }
         
         .order-item:last-child {
@@ -92,13 +95,17 @@ $items = $stmt->fetchAll();
         .order-summary {
             margin-top: 20px;
             padding-top: 20px;
-            border-top: 1px solid #eee;
+            border-top: 1px solid var(--light-border); /* Use CSS variable */
             font-weight: bold;
+        }
+        
+        .order-summary p {
+            color: var(--text-color); /* Ensure text is readable */
         }
         
         .btn {
             display: inline-block;
-            background: #4a6fa5;
+            background: var(--orange); /* Use CSS variable */
             color: #fff;
             padding: 12px 25px;
             border-radius: 4px;
@@ -108,12 +115,12 @@ $items = $stmt->fetchAll();
         }
         
         .btn:hover {
-            background: #3a5a80;
+            background: var(--dark-color); /* Use CSS variable */
         }
     </style>
 </head>
 <body>
-    <?php include 'header.php'; ?>
+    <?php // include 'header.php'; // Removed this include as full header should be in each file or managed differently ?>
     
     <div class="success-container">
         <div class="success-icon">
@@ -150,9 +157,25 @@ $items = $stmt->fetchAll();
         
         <p>We've sent a confirmation email to <?php echo htmlspecialchars($_SESSION['email']); ?></p>
         
-        <a href="index.php" class="btn">Continue Shopping</a>
+        <a href="html.php" class="btn">Continue Shopping</a>
     </div>
     
-    <?php include 'footer.php'; ?>
+    <?php // include 'footer.php'; // Removed this include ?>
+
+    <script>
+        // Dark Mode Functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const htmlElement = document.documentElement; // This is the <html> tag
+
+            // Check for saved theme preference in local storage
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                htmlElement.setAttribute('data-theme', savedTheme);
+            } else {
+                // Default to light theme if no preference is saved
+                htmlElement.setAttribute('data-theme', 'light');
+            }
+        });
+    </script>
 </body>
 </html>

@@ -97,39 +97,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Profile - VerseWell</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css"> <!-- Link to your main style.css -->
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <style>
-        :root {
-            --primary:  #b6862c;
-            --primary-dark: #4e2e0e;
-            --secondary: #f8f9fa;
-            --danger: #e74c3c;
-            --success: #27ae60;
-            --warning: #f39c12;
-            --info: #3498db;
-            --light: #f5f5f5;
-            --dark: #333;
-            --white: #fff;
-            --gray: #ddd;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
+        /* Adjusting existing inline styles to use CSS variables for dark mode compatibility */
         body {
-            background-color: var(--light);
-            color: var(--dark);
+            background-color: var(--background); /* Use CSS variable */
+            color: var(--text-color); /* Use CSS variable */
             line-height: 1.6;
         }
         
         /* Header Styles */
+        /* These are mostly covered by style.css, but ensuring consistency */
         .header {
-            background-color: var(--primary);
+            background-color: var(--dark-color); /* Use CSS variable */
             padding: 1rem 5%;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--box-shadow); /* Use CSS variable */
         }
         
         .header-1 {
@@ -140,7 +123,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
         
         .logo {
-            color: var(--white);
+            color: var(--orange); /* Use CSS variable */
             font-size: 1.8rem;
             font-weight: bold;
             text-decoration: none;
@@ -148,12 +131,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
         .logo i {
             margin-right: 0.5rem;
+            color: var(--light-color); /* Use CSS variable */
         }
         
         .search-form {
             display: flex;
             align-items: center;
-            background: var(--white);
+            background: var(--search-background); /* Use CSS variable */
             border-radius: 4px;
             padding: 0.5rem;
             width: 40%;
@@ -165,12 +149,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             width: 100%;
             padding: 0.5rem;
             font-size: 1rem;
+            background: var(--search-background); /* Ensure input background matches */
+            color: var(--text-color); /* Input text color */
         }
         
         .search-form button {
             background: none;
             border: none;
-            color: var(--primary);
+            color: var(--orange); /* Use CSS variable */
             cursor: pointer;
             font-size: 1rem;
         }
@@ -182,16 +168,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
         
         .icons a, .icons div {
-            color: var(--white);
+            color: var(--text-color); /* Use CSS variable */
             font-size: 1.2rem;
             cursor: pointer;
             position: relative;
+        }
+
+        .icons a:hover, .icons div:hover {
+            color: var(--orange); /* Use CSS variable */
         }
         
         .user-info {
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            color: var(--text-color); /* Use CSS variable */
         }
         
         .user-info i {
@@ -199,7 +190,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
         
         .header-2 {
-            background-color: var(--primary-dark);
+            background-color: var(--orange); /* Use CSS variable */
             padding: 0.8rem 0;
         }
         
@@ -210,7 +201,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
         
         .navbar a {
-            color: var(--white);
+            color: #fff; /* Keep white for navigation links */
             text-decoration: none;
             text-transform: capitalize;
             font-size: 1rem;
@@ -218,13 +209,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
         
         .navbar a:hover {
-            opacity: 0.8;
+            background: var(--black); /* Use CSS variable */
+            color: var(--orange); /* Use CSS variable */
         }
         
         .bottom-navbar {
             display: none;
             justify-content: space-around;
-            background: var(--primary);
+            background: var(--orange); /* Use CSS variable */
             padding: 1rem;
             position: fixed;
             bottom: 0;
@@ -234,7 +226,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
         
         .bottom-navbar a {
-            color: var(--white);
+            color: #fff; /* Keep white for bottom navbar links */
             font-size: 1.2rem;
         }
         
@@ -255,14 +247,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             height: 120px;
             border-radius: 50%;
             object-fit: cover;
-            border: 4px solid var(--white);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border: 4px solid var(--heading-background); /* Use CSS variable */
+            box-shadow: var(--box-shadow); /* Use CSS variable */
             margin-bottom: 1rem;
         }
         
         .profile-header h1 {
-            color: var(--primary);
+            color: var(--orange); /* Use CSS variable */
             margin-bottom: 0.5rem;
+        }
+
+        .profile-header p {
+            color: var(--text-color); /* Ensure readability */
         }
         
         /* Tabs */
@@ -272,7 +268,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
         .tab-buttons {
             display: flex;
-            border-bottom: 1px solid var(--gray);
+            border-bottom: 1px solid var(--light-border); /* Use CSS variable */
         }
         
         .tab-btn {
@@ -283,12 +279,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             font-size: 1rem;
             border-bottom: 3px solid transparent;
             transition: all 0.3s;
+            color: var(--text-color); /* Use CSS variable */
         }
         
         .tab-btn.active {
-            border-bottom: 3px solid var(--primary);
-            color: var(--primary);
+            border-bottom: 3px solid var(--orange); /* Use CSS variable */
+            color: var(--orange); /* Use CSS variable */
             font-weight: bold;
+        }
+
+        .tab-btn:hover:not(.active) {
+            color: var(--orange); /* Use CSS variable */
         }
         
         .tab-content {
@@ -302,18 +303,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
         /* Profile Sections */
         .profile-section {
-            background: var(--white);
+            background: var(--heading-background); /* Use CSS variable */
             border-radius: 8px;
             padding: 1.5rem;
             margin-bottom: 1.5rem;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            box-shadow: var(--box-shadow); /* Use CSS variable */
         }
         
         .profile-section h2 {
-            color: var(--primary);
+            color: var(--orange); /* Use CSS variable */
             margin-bottom: 1rem;
             padding-bottom: 0.5rem;
-            border-bottom: 1px solid var(--gray);
+            border-bottom: 1px solid var(--light-border); /* Use CSS variable */
         }
         
         .form-group {
@@ -324,6 +325,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             display: block;
             margin-bottom: 0.5rem;
             font-weight: 500;
+            color: var(--text-color); /* Use CSS variable */
         }
         
         .form-group input,
@@ -331,15 +333,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         .form-group textarea {
             width: 100%;
             padding: 0.8rem;
-            border: 1px solid var(--gray);
+            border: var(--border); /* Use CSS variable */
             border-radius: 4px;
             font-size: 1rem;
             transition: border 0.3s;
+            background: var(--search-background); /* Use CSS variable */
+            color: var(--text-color); /* Use CSS variable */
         }
         
         .form-group input:focus,
         .form-group textarea:focus {
-            border-color: var(--primary);
+            border-color: var(--orange); /* Use CSS variable */
             outline: none;
         }
         
@@ -349,7 +353,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
         
         .btn {
-            background-color: var(--primary);
+            background-color: var(--orange); /* Use CSS variable */
             color: var(--white);
             border: none;
             padding: 0.8rem 1.5rem;
@@ -360,7 +364,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
         
         .btn:hover {
-            background-color: var(--primary-dark);
+            background-color: var(--dark-color); /* Use CSS variable */
         }
         
         /* Messages */
@@ -371,48 +375,49 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
         
         .error {
-            background-color: #fdecea;
-            color: var(--danger);
+            background-color: #fdecea; /* Light red background */
+            color: #e74c3c; /* Red text */
         }
         
         .success {
-            background-color: #e8f5e9;
-            color: var(--success);
+            background-color: #e8f5e9; /* Light green background */
+            color: #27ae60; /* Green text */
         }
         
-        /* Order History */
+        /* Order History (if implemented) */
         .order-history {
             width: 100%;
             border-collapse: collapse;
             margin-top: 1rem;
+            color: var(--text-color); /* Use CSS variable */
         }
         
         .order-history th,
         .order-history td {
             padding: 0.8rem;
             text-align: left;
-            border-bottom: 1px solid var(--gray);
+            border-bottom: 1px solid var(--light-border); /* Use CSS variable */
         }
         
         .order-history th {
-            background-color: var(--secondary);
+            background-color: var(--hover-background); /* Use CSS variable */
             font-weight: 500;
         }
         
         .order-history tr:hover {
-            background-color: var(--light);
+            background-color: var(--hover-background); /* Use CSS variable */
         }
         
-        .status-pending { color: var(--warning); }
-        .status-processing { color: var(--info); }
-        .status-shipped { color: var(--success); }
-        .status-delivered { color: var(--success); font-weight: bold; }
-        .status-cancelled { color: var(--danger); }
+        .status-pending { color: var(--orange); } /* Using theme orange for warning */
+        .status-processing { color: #3498db; } /* Keeping specific blue for info */
+        .status-shipped { color: #27ae60; } /* Keeping specific green for success */
+        .status-delivered { color: #27ae60; font-weight: bold; } /* Keeping specific green for success */
+        .status-cancelled { color: #e74c3c; } /* Keeping specific red for danger */
         
-        /* Footer */
+        /* Footer (if implemented) */
         .footer {
-            background-color: var(--dark);
-            color: var(--white);
+            background-color: var(--dark-color); /* Use CSS variable */
+            color: var(--text-color); /* Use CSS variable */
             padding: 3rem 5% 1.5rem;
         }
         
@@ -426,19 +431,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         .box h3 {
             font-size: 1.2rem;
             margin-bottom: 1rem;
-            color: var(--white);
+            color: var(--text-color); /* Use CSS variable */
         }
         
         .box a {
             display: block;
-            color: var(--gray);
+            color: var(--light-color); /* Use CSS variable */
             margin-bottom: 0.8rem;
             text-decoration: none;
             transition: color 0.3s;
         }
         
         .box a:hover {
-            color: var(--white);
+            color: var(--orange); /* Use CSS variable */
         }
         
         .box a i {
@@ -453,23 +458,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
         
         .share a {
-            color: var(--white);
+            color: var(--text-color); /* Use CSS variable */
             font-size: 1.5rem;
             transition: opacity 0.3s;
         }
         
         .share a:hover {
             opacity: 0.8;
+            color: var(--orange); /* Use CSS variable */
         }
         
         .credit {
             text-align: center;
             padding-top: 1.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            border-top: 1px solid var(--light-border); /* Use CSS variable */
+            color: var(--dark-color); /* Use CSS variable */
         }
         
         .credit span {
-            color: var(--primary);
+            color: var(--orange); /* Use CSS variable */
         }
         
         /* Responsive */
@@ -495,25 +502,66 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 grid-template-columns: 1fr;
             }
         }
+        /* Styles for the dark mode toggle button */
+        .theme-toggle-button {
+            background: none;
+            border: none;
+            font-size: 2.5rem; /* Match other icons */
+            margin-left: 1.5rem;
+            color: var(--text-color); /* Inherit from theme */
+            cursor: pointer;
+            transition: color 0.2s linear;
+        }
+
+        .theme-toggle-button:hover {
+            color: var(--orange); /* Match other icon hover effects */
+        }
     </style>
 </head>
 <body>
     <!-- Header Section -->
-    
-        
+    <header class="header">
+        <div class="header-1">
+            <a href="html.php" class="logo"> <i class="fas fa-book"></i> versewell </a>
+            <div class="search-container">
+                <form action="" class="search-form">
+                    <input type="search" name="search" placeholder="Search here..." id="search-box" autocomplete="off">
+                    <label for="search-box" class="fas fa-search"></label>
+                </form>
+            </div>
+            <div class="icons">
+                <div id="search-btn" class="fas fa-search"></div>
+                <a href="wishlist.php" class="fas fa-heart"></a>
+                <a href="cart.php" class="fas fa-shopping-cart" id="cart-btn"></a> 
+                <a href="profile.php"><div class="fas fa-user"></div></a>
+                <button class="theme-toggle-button" id="theme-toggle">
+                    <i class="fas fa-moon"></i> 
+                </button>
+                <div class="userinfo">
+                    <?php if (isset($user['first_name']) && isset($user['username'])): ?>
+                        <p>Welcome,<br> <span><?php echo htmlspecialchars($user['first_name']); ?></span></p>
+                    <?php else: ?>
+                        <p>Welcome, Guest</p>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </div>
         <div class="header-2">
-            
+            <nav class="navbar">
+                <a href="html.php">home</a>
+                <a href="html4.php">reviews</a>
+                <a href="html3.php">blogs</a>
+                <a href='html2.php'>genres</a>
+            </nav>
         </div>
     </header>
     
     <!-- Bottom Navigation (Mobile) -->
     <nav class="bottom-navbar">
-        <a href="index.php" class="fas fa-home"></a>
-        <a href="featured.php" class="fas fa-list"></a>
-        <a href="genres.php" class="fas fa-tags"></a>
-        <?php if(isset($_SESSION['user_id'])): ?>
-            <a href="profile.php" class="fas fa-user"></a>
-        <?php endif; ?>
+        <a href="html.php" class="fas fa-home"></a>
+        <a href="html.php#featured" class="fas fa-list"></a>
+        <a href="html2.php" class="fas fa-tags"></a> <!-- Assuming genres is represented by tags -->
+        <a href="profile.php" class="fas fa-user"></a>
     </nav>
 
     <!-- Main Content -->
@@ -523,6 +571,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                  alt="Profile Image" class="profile-avatar">
             <h1><?php echo htmlspecialchars($user['first_name'] . ' ' . $user['last_name']); ?></h1>
             <p>Member since <?php echo date('F Y', strtotime($user['created_at'])); ?></p>
+           <a href="logout.php" ><div class="logout"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M217.9 105.9L340.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L217.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1L32 320c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></svg></div></a>
         </div>
 
         <?php if ($error): ?>
@@ -537,7 +586,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <div class="tab-buttons">
                 <button class="tab-btn active" onclick="openTab(event, 'profile-tab')">Profile</button>
                 <button class="tab-btn" onclick="openTab(event, 'password-tab')">Password</button>
-               
             </div>
         </div>
 
@@ -628,9 +676,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </form>
             </div>
         </div>
-
-       
-    </section>
+    </div>
 
     <script>
         // Tab functionality
@@ -676,6 +722,37 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 cartBtn.style.position = 'relative';
                 cartBtn.appendChild(indicator);
             }
+
+            // Dark Mode Functionality
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            const htmlElement = document.documentElement; // This is the <html> tag
+
+            // Check for saved theme preference in local storage
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                htmlElement.setAttribute('data-theme', savedTheme);
+                // Update the icon based on the loaded theme
+                if (savedTheme === 'dark') {
+                    themeToggleBtn.querySelector('i').classList.replace('fa-moon', 'fa-sun');
+                } else {
+                    themeToggleBtn.querySelector('i').classList.replace('fa-sun', 'fa-moon');
+                }
+            } else {
+                // Default to light theme if no preference is saved
+                htmlElement.setAttribute('data-theme', 'light');
+            }
+
+            themeToggleBtn.addEventListener('click', () => {
+                if (htmlElement.getAttribute('data-theme') === 'dark') {
+                    htmlElement.setAttribute('data-theme', 'light');
+                    localStorage.setItem('theme', 'light');
+                    themeToggleBtn.querySelector('i').classList.replace('fa-sun', 'fa-moon');
+                } else {
+                    htmlElement.setAttribute('data-theme', 'dark');
+                    localStorage.setItem('theme', 'dark');
+                    themeToggleBtn.querySelector('i').classList.replace('fa-moon', 'fa-sun');
+                }
+            });
         });
     </script>
 </body>

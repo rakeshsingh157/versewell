@@ -9,6 +9,40 @@
     --border-hover:.1rem solid var(--black);
     --box-shadow:0 .5rem 1rem rgba(77, 46, 14, 0.15); /* dark brown shadow */
     --background: #f3e5d0; /* very light brown background */
+    --text-color: var(--black);
+    --heading-background: #fff;
+    --search-background: #fff;
+    --hover-background: #f5f5f5;
+    --light-border: #eee;
+}
+
+
+.logout svg{
+
+   height:20px;
+    transform: rotateY(180deg);
+
+    margin:20px
+    
+    
+
+}
+
+/* Dark mode variables */
+html[data-theme='dark'] {
+    --orange: #d1a84f; /* Slightly brighter orange for dark mode contrast */
+    --dark-color: #1a1a1a; /* Dark background for header-1 and other dark elements */
+    --black: #f0f0f0; /* Light text for dark mode */
+    --light-color: #bbbbbb; /* Lighter grey for secondary text/borders */
+    --border:.1rem solid #d1a84f; /* Use dark mode orange for borders */
+    --border-hover:.1rem solid var(--black);
+    --box-shadow:0 .5rem 1rem rgba(0, 0, 0, 0.5); /* Darker shadow for dark mode */
+    --background: #2b2b2b; /* Overall dark background */
+    --text-color: #f0f0f0; /* Main text color */
+    --heading-background: #3a3a3a; /* Darker background for headings/sections */
+    --search-background: #4a4a4a; /* Darker background for search/inputs */
+    --hover-background: #3a3a3a; /* Darker hover state */
+    --light-border: #555; /* Darker light borders */
 }
 
 
@@ -55,12 +89,29 @@ html::-webkit-scrollbar-thumb{
 
 body {
     background: var(--background);
-    color: var(--black);
+    color: var(--text-color); /* Use text-color variable */
 }
 
 section{
     padding:5rem 9%;
 }
+
+.nje {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.nje h1 {
+    font-size: 4rem;
+    color: var(--text-color); /* Use text-color variable */
+    background: var(--heading-background); /* Use heading-background variable */
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+    display: inline-block;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+}
+
 
 .heading{
     text-align: center;
@@ -75,15 +126,15 @@ section{
     transform: translateY(-50%);
     width: 100%;
     height:.01rem;
-    background: rgba(0,0,0,.1);
+    background: var(--light-border); /* Use light-border variable */
     z-index: -1;
 }
 
 .heading span{
     font-size: 3rem;
     padding:.5rem 2rem;
-    color:var(--black);
-    background: #fff;
+    color:var(--text-color); /* Use text-color variable */
+    background: var(--heading-background); /* Use heading-background variable */
     border:var(--border);
 }
 
@@ -120,6 +171,7 @@ section{
 
 .header .header-1 .logo i{
     color: var(--light-color);
+    
 }
 
 .header .header-1 .search-form{
@@ -127,7 +179,7 @@ section{
     height:5rem;
     border:var(--border);
     overflow: hidden;
-    background:#fff;
+    background:var(--search-background); /* Use search-background variable */
     display:flex;
     align-items: center;
     border-radius: .5rem;
@@ -139,13 +191,14 @@ section{
     height:100%;
     width:100%;
     text-transform: none;
-    color:var(--black);
+    color:var(--text-color); /* Use text-color variable */
+    background: var(--search-background); /* Ensure input background matches */
 }
 
 .header .header-1 .search-form label{
     font-size: 2.5rem;
     padding-right: 1.5rem;
-    color:var(--black);
+    color:var(--text-color); /* Use text-color variable */
     cursor: pointer;
 }
 
@@ -157,7 +210,7 @@ section{
 .header .header-1 .icons a{
     font-size: 2.5rem;
     margin-left: 1.5rem;
-    color:var(--black);
+    color:White; /* Use text-color variable */
     cursor: pointer;
 }
 
@@ -221,7 +274,7 @@ section{
     display: flex;
     align-items: center;
     justify-content: center;
-    background:rgba(255,255,255,.9);
+    background:rgba(255,255,255,.9); /* This background will remain light overlay */
     position:fixed;
     top:0; right:-105%;
     z-index: 10000;
@@ -229,12 +282,16 @@ section{
     width:100%;
 }
 
+html[data-theme='dark'] .login-form-container {
+    background: rgba(0, 0, 0, 0.7); /* Darker overlay for dark mode */
+}
+
 .login-form-container.active{
     right:0;
 }
 
 .login-form-container form{
-    background:#fff;
+    background:var(--background); /* Use background variable */
     border:var(--border);
     width:40rem;
     padding:2rem;
@@ -246,7 +303,7 @@ section{
 .login-form-container form h3{
     font-size: 2.5rem;
     text-transform: uppercase;
-    color:var(--black);
+    color:var(--text-color); /* Use text-color variable */
     text-align: center;
 }
 
@@ -254,6 +311,7 @@ section{
     display: block;
     font-size: 1.5rem;
     padding-top: 1rem;
+    color:var(--text-color); /* Use text-color variable */
 }
 
 .login-form-container form .box{
@@ -263,7 +321,8 @@ section{
     border:var(--border);
     border-radius: .5rem;
     padding:1rem 1.2rem;
-    color:var(--black);
+    color:var(--text-color); /* Use text-color variable */
+    background:var(--search-background); /* Use search-background for input boxes */
     text-transform: none;
 }
 
@@ -301,15 +360,22 @@ section{
     position: absolute;
     top:1.5rem; right:2.5rem;
     font-size: 5rem;
-    color:var(--black);
+    color:var(--text-color); /* Use text-color variable */
     cursor: pointer;
 }
 
 .home{
-    background: url(../image/wall.jpeg) no-repeat;
+    background: url(../image/wall.jpeg) no-repeat; /* Keep original image */
     background-size: cover;
     background-position: center;
 }
+
+/* Adjust text color for home section content for better readability in both modes */
+.home .row .content h3,
+.home .row .content p {
+    color: var(--text-color);
+}
+
 
 .home .row{
     display:flex;
@@ -342,7 +408,7 @@ section{
 }
 
 .home .row .content h3{
-    color:var(--black);
+    color:var(--text-color); /* Use text-color variable */
     font-size: 4.5rem;
 }
 
@@ -373,7 +439,7 @@ section{
 
 .icons-container .icons h3{
     font-size: 2.2rem;
-    color:var(--black);
+    color:var(--text-color); /* Use text-color variable */
     padding-bottom: .5rem;
 }
 
@@ -395,8 +461,8 @@ section{
 }
 
 .featured .featured-slider .box .image{
+    background: linear-gradient(15deg, var(--light-border) 30%, var(--heading-background) 30.1%); /* Use variables */
     padding:1rem;
-    background: linear-gradient(15deg, #eee 30%, #fff 30.1%);
 }
 
 .featured .featured-slider .box:hover .image{
@@ -411,7 +477,7 @@ section{
     border-bottom: var(--border-hover);
     position: absolute;
     top:0; left:0; right: 0;
-    background: #fff;
+    background: var(--heading-background); /* Use heading-background variable */
     z-index: 1;
     transform: translateY(-105%);
 }
@@ -421,7 +487,7 @@ section{
 }
 
 .featured .featured-slider .box .icons a{
-    color:var(--black);
+    color:var(--text-color); /* Use text-color variable */
     font-size: 2.2rem;
     padding:1.3rem 1.5rem;
 }
@@ -432,18 +498,18 @@ section{
 }
 
 .featured .featured-slider .box .content{
-    background:#eee;
+    background:var(--light-border); /* Use light-border variable */
     padding:1.5rem;
 }
 
 .featured .featured-slider .box .content h3{
     font-size: 2rem;
-    color:var(--black);
+    color:var(--text-color); /* Use text-color variable */
 }
 
 .featured .featured-slider .box .content .price{
     font-size: 2.2rem;
-    color:var(--black);
+    color:var(--text-color); /* Use text-color variable */
     padding-top: 1rem;
 }
 
@@ -458,8 +524,8 @@ section{
     border:var(--border-hover);
     height:4rem;
     width:4rem;
-    color:var(--black);
-    background: #fff;
+    color:var(--text-color); /* Use text-color variable */
+    background: var(--heading-background); /* Use heading-background variable */
 }
 
 .swiper-button-next::after,
@@ -474,7 +540,7 @@ section{
 }
 
 .newsletter{
-    background:url(../image/girl.jpeg) no-repeat;
+    background:url(../image/girl.jpeg) no-repeat; /* Keep original image */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -489,7 +555,7 @@ section{
 
 .newsletter form h3{
     font-size: 2.2rem;
-    color:#fff;
+    color:#fff; /* Keep white for readability over image */
     padding-bottom: .7rem;
     font-weight: normal;
 }
@@ -499,7 +565,8 @@ section{
     margin: .7rem 0;
     padding:1rem 1.2rem;
     font-size: 1.6rem;
-    color:var(--black);
+    color:var(--text-color); /* Use text-color variable */
+    background: var(--search-background); /* Use search-background variable */
     border-radius: .5rem;
     text-transform: none;
 }
@@ -523,12 +590,12 @@ section{
 
 .arrivals .arrivals-slider .box .content h3{
     font-size: 2rem;
-    color:var(--black);
+    color:var(--text-color); /* Use text-color variable */
 }
 
 .arrivals .arrivals-slider .box .content .price{
     font-size: 2.2rem;
-    color:var(--black);
+    color:var(--text-color); /* Use text-color variable */
     padding-bottom: .5rem;
 }
 
@@ -544,7 +611,7 @@ section{
 }
 
 .deal{
-    background:#f3f3f3;
+    background:var(--light-border); /* Use light-border variable */
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -570,7 +637,7 @@ section{
 }
 
 .deal .content h1{
-    color:var(--black);
+    color:var(--text-color); /* Use text-color variable */
     font-size: 4rem;
 }
 
@@ -600,7 +667,7 @@ section{
 }
 
 .reviews .reviews-slider .box h3{
-    color:var(--black);
+    color:var(--text-color); /* Use text-color variable */
     font-size: 2.2rem;
     padding:.5rem 0;
 }
@@ -652,7 +719,7 @@ section{
 
 .blogs .blogs-slider .box .content h3{
     font-size: 2.2rem;
-    color:var(--black);
+    color:var(--text-color); /* Use text-color variable */
 }
 
 .blogs .blogs-slider .box .content p{
@@ -670,7 +737,7 @@ section{
 
 .footer .box-container .box h3{
     font-size: 2.2rem;
-    color:var(--black);
+    color:var(--text-color); /* Use text-color variable */
     padding:1rem 0;
 }
 
@@ -735,7 +802,7 @@ section{
     height:100%;
     width: 100%;
     z-index: 10000;
-    background:#f7f7f7;
+    background:var(--background); /* Use background variable */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -749,13 +816,122 @@ section{
     height:10rem;
 }
 
+/* Specific styles for search results to integrate with dark mode */
+.search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--search-background); /* Use theme variable */
+    border: var(--border); /* Use theme variable */
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow); /* Use theme variable */
+    z-index: 1000;
+    max-height: 400px;
+    overflow-y: auto;
+    display: none;
+}
+.search-result-item {
+    padding: 10px;
+    border-bottom: .1rem solid var(--light-border); /* Use theme variable */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.search-result-item:hover {
+    background-color: var(--hover-background); /* Use theme variable */
+}
+.search-result-item img {
+    width: 40px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+.search-result-info {
+    flex-grow: 1;
+}
+.search-result-info h4 {
+    margin: 0;
+    color: var(--text-color); /* Use theme variable */
+}
+.search-result-info p {
+    margin: 5px 0 0;
+    color: var(--light-color); /* Use theme variable */
+}
+.no-results {
+    padding: 15px;
+    color: var(--light-color); /* Use theme variable */
+    text-align: center;
+}
+.search-container {
+    position: relative;
+}
+.search-result-item a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+}
 
+/* Custom Message Modal Styling */
+#message-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--background); /* Use background variable for modal */
+    border: 2px solid var(--orange);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow); /* Use box-shadow variable */
+    z-index: 1002; /* Higher than login modal */
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    color: var(--text-color); /* Ensure text color changes with theme */
+}
 
+#message-modal h3 {
+    color: var(--text-color); /* Ensure text color changes with theme */
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
 
+#message-modal p {
+    color: var(--text-color); /* Ensure text color changes with theme */
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
 
+#message-modal .close-btn {
+    background: var(--orange);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
 
+#message-modal .close-btn:hover {
+    background: var(--dark-color); /* Adjusted for theme consistency */
+}
 
-
+/* Responsive adjustments for modal */
+@media (max-width: 450px) {
+    #message-modal {
+        padding: 20px;
+    }
+    #message-modal h3 {
+        font-size: 1.5rem;
+    }
+    #message-modal p {
+        font-size: 1rem;
+    }
+}
 
 
 /* media queries  */
