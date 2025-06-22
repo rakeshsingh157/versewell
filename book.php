@@ -84,6 +84,14 @@ require_once 'db.php';
         .btn:hover {
             background: var(--dark-color); /* Use CSS variable */
         }
+        /* New style for the back button */
+        .back-btn {
+            background: #6c757d; /* A neutral grey color */
+            margin-right: 1rem; /* Space between buttons */
+        }
+        .back-btn:hover {
+            background: #5a6268; /* Darker grey on hover */
+        }
 
         /* Custom Message Modal Styling */
         #message-modal {
@@ -135,6 +143,8 @@ require_once 'db.php';
             <p class="author">by <?php echo htmlspecialchars($author); ?></p>
             <div class="price"><?php echo htmlspecialchars($price); ?></div>
             <p class="description"><?php echo htmlspecialchars($description); ?></p>
+            <!-- Back Button -->
+            <button class="btn back-btn" onclick="history.back()">Back</button>
             <a href="#" class="btn add-to-cart" 
                data-title="<?php echo htmlspecialchars($title); ?>" 
                data-price="<?php echo htmlspecialchars($price); ?>" 

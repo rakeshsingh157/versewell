@@ -212,7 +212,11 @@ if (isset($_SESSION['user_id'])) {
                 <div class="swiper-slide box">
                     <div class="icons">
                         <a href="book.php?title=It&author=Stephen%20King&price=1503&image=it.jpg&description=A%20terrifying%20horror%20novel%20by%20Stephen%20King." class="fas fa-search"></a>
-                        <a href="#" class="fas fa-heart"></a>
+                        <!-- MODIFIED: Added add-to-wishlist class and data attributes -->
+                        <a href="#" class="fas fa-heart add-to-wishlist"
+                           data-title="It"
+                           data-price="1503"
+                           data-img="it.jpg"></a>
                         <a href="book.php?title=It&author=Stephen%20King&price=1503&image=it.jpg&description=A%20terrifying%20horror%20novel%20by%20Stephen%20King." class="fas fa-eye"></a>
                     </div>
                     <div class="image">
@@ -227,7 +231,11 @@ if (isset($_SESSION['user_id'])) {
                 <div class="swiper-slide box">
                     <div class="icons">
                         <a href="book.php?title=Mexican%20Gothic&author=Silvia%20Moreno-Garcia&price=1084.365&image=mexican_gothic.jpg&description=A%20gothic%20horror%20novel%20set%20in%201950s%20Mexico." class="fas fa-search"></a>
-                        <a href="#" class="fas fa-heart"></a>
+                        <!-- MODIFIED: Added add-to-wishlist class and data attributes -->
+                        <a href="#" class="fas fa-heart add-to-wishlist"
+                           data-title="Mexican Gothic"
+                           data-price="1084.365"
+                           data-img="mexican_gothic.jpg"></a>
                         <a href="book.php?title=Mexican%20Gothic&author=Silvia%20Moreno-Garcia&price=1084.365&image=mexican_gothic.jpg&description=A%20gothic%20horror%20novel%20set%20in%201950s%20Mexico." class="fas fa-eye"></a>
                     </div>
                     <div class="image">
@@ -242,7 +250,11 @@ if (isset($_SESSION['user_id'])) {
                 <div class="swiper-slide box">
                     <div class="icons">
                         <a href="book.php?title=White%20is%20for%20Witching&author=Helen%20Oyeyemi&price=1167.365&image=white_is_for_witching.jpg&description=A%20haunting%20and%20stylishly%20written%20ghost%20story." class="fas fa-search"></a>
-                        <a href="#" class="fas fa-heart"></a>
+                        <!-- MODIFIED: Added add-to-wishlist class and data attributes -->
+                        <a href="#" class="fas fa-heart add-to-wishlist"
+                           data-title="White is for Witching"
+                           data-price="1167.365"
+                           data-img="white_is_for_witching.jpg"></a>
                         <a href="book.php?title=White%20is%20for%20Witching&author=Helen%20Oyeyemi&price=1167.365&image=white_is_for%20witching.jpg&description=A%20haunting%20and%20stylishly%20written%20ghost%20story." class="fas fa-eye"></a>
                     </div>
                     <div class="image">
@@ -257,7 +269,11 @@ if (isset($_SESSION['user_id'])) {
                 <div class="swiper-slide box">
                     <div class="icons">
                         <a href="book.php?title=A%20Head%20Full%20of%20Ghosts&author=Paul%20Tremblay&price=1419.365&image=a_head_full_of_ghosts.jpg&description=A%20meta-horror%20novel%20that%20explores%20the%20nature%20of%20reality." class="fas fa-search"></a>
-                        <a href="#" class="fas fa-heart"></a>
+                        <!-- MODIFIED: Added add-to-wishlist class and data attributes -->
+                        <a href="#" class="fas fa-heart add-to-wishlist"
+                           data-title="A Head Full of Ghosts"
+                           data-price="1419.365"
+                           data-img="a_head_full_of_ghosts.jpg"></a>
                         <a href="book.php?title=A%20Head%20Full%20of%20Ghosts&author=Paul%20Tremblay&price=1419.365&image=a_head_full_of_ghosts.jpg&description=A%20meta-horror%20novel%20that%20explores%20the%20nature%20of%20reality." class="fas fa-eye"></a>
                     </div>
                     <div class="image">
@@ -272,7 +288,11 @@ if (isset($_SESSION['user_id'])) {
                 <div class="swiper-slide box">
                     <div class="icons">
                         <a href="book.php?title=Bird%20Box&author=Josh%20Malerman&price=1335.365&image=bird_box.jpg&description=A%20post-apocalyptic%20horror%20novel%20about%20creatures%20that%20drive%20people%20to%20insanity%20when%20seen." class="fas fa-search"></a>
-                        <a href="#" class="fas fa-heart"></a>
+                        <!-- MODIFIED: Added add-to-wishlist class and data attributes -->
+                        <a href="#" class="fas fa-heart add-to-wishlist"
+                           data-title="Bird Box"
+                           data-price="1335.365"
+                           data-img="bird_box.jpg"></a>
                         <a href="book.php?title=Bird%20Box&author=Josh%20Malerman&price=1335.365&image=bird_box.jpg&description=A%20post-apocalyptic%20horror%20novel%20about%20creatures%20that%20drive%20people%20to%20insanity%20when%20seen." class="fas fa-eye"></a>
                     </div>
                     <div class="image">
@@ -299,7 +319,11 @@ if (isset($_SESSION['user_id'])) {
                 <div class="swiper-slide box">
                     <div class="icons">
                         <a href="book.php?title=The%20Hunger%20Games&author=Suzanne%20Collins&price=1251.365&image=the_hunger_games.jpg&description=A%20dystopian%20adventure%20novel%20where%20teenagers%20fight%20to%20the%20death." class="fas fa-search"></a>
-                        <a href="#" class="fas fa-heart"></a>
+                        <!-- MODIFIED: Added add-to-wishlist class and data attributes -->
+                        <a href="#" class="fas fa-heart add-to-wishlist"
+                           data-title="The Hunger Games"
+                           data-price="1251.365"
+                           data-img="the_hunger_games.jpg"></a>
                         <a href="book.php?title=The%20Hunger%20Games&author=Suzanne%20Collins&price=1251.365&image=the_hunger_games.jpg&description=A%20dystopian%20adventure%20novel%20where%20teenagers%20fight%20to%20the%20death." class="fas fa-eye"></a>
                     </div>
                     <div class="image">
@@ -314,7 +338,11 @@ if (isset($_SESSION['user_id'])) {
                 <div class="swiper-slide box">
                     <div class="icons">
                         <a href="book.php?title=The%20Fallen%20Stars&author=Jonathan%20French&price=1586.365&image=the_fallen_stars.jpg&description=An%20epic%20fantasy%20adventure%20with%20intriguing%20characters." class="fas fa-search"></a>
-                        <a href="#" class="fas fa-heart"></a>
+                        <!-- MODIFIED: Added add-to-wishlist class and data attributes -->
+                        <a href="#" class="fas fa-heart add-to-wishlist"
+                           data-title="The Fallen Stars"
+                           data-price="1586.365"
+                           data-img="the_fallen_stars.jpg"></a>
                         <a href="book.php?title=The%20Fallen%20Stars&author=Jonathan%20French&price=1586.365&image=the_fallen_stars.jpg&description=An%20epic%20fantasy%20adventure%20with%20intriguing%20characters." class="fas fa-eye"></a>
                     </div>
                     <div class="image">
@@ -329,7 +357,11 @@ if (isset($_SESSION['user_id'])) {
                 <div class="swiper-slide box">
                     <div class="icons">
                         <a href="book.php?title=Into%20the%20Wild&author=Jon%20Krakauer&price=1753.365&image=into%20the%20wild%2C%20aventur.jpg&description=A%20non-fiction%20account%20of%20a%20young%20man's%20adventure%20into%20the%20Alaskan%20wilderness." class="fas fa-search"></a>
-                        <a href="#" class="fas fa-heart"></a>
+                        <!-- MODIFIED: Added add-to-wishlist class and data attributes -->
+                        <a href="#" class="fas fa-heart add-to-wishlist"
+                           data-title="Into the Wild"
+                           data-price="1753.365"
+                           data-img="into%20the%20wild%2C%20aventur.jpg"></a>
                         <a href="book.php?title=Into%20the%20Wild&author=Jon%20Krakauer&price=1753.365&image=into%20the%20wild%2C%20aventur.jpg&description=A%20non-fiction%20account%20of%20a%20young%20man's%20adventure%20into%20the%20Alaskan%20wilderness." class="fas fa-eye"></a>
                     </div>
                     <div class="image">
@@ -344,7 +376,11 @@ if (isset($_SESSION['user_id'])) {
                 <div class="swiper-slide box">
                     <div class="icons">
                         <a href="book.php?title=Criminal%20Mischief&author=Stuart%20Woods&price=2505.00&image=criminal_mischief.jpg&description=A%20thrilling%20adventure%20and%20mystery%20novel." class="fas fa-search"></a>
-                        <a href="#" class="fas fa-heart"></a>
+                        <!-- MODIFIED: Added add-to-wishlist class and data attributes -->
+                        <a href="#" class="fas fa-heart add-to-wishlist"
+                           data-title="Criminal Mischief"
+                           data-price="2505.00"
+                           data-img="criminal_mischief.jpg"></a>
                         <a href="book.php?title=Criminal%20Mischief&author=Stuart%20Woods&price=2505.00&image=criminal_mischief.jpg&description=A%20thrilling%20adventure%20and%20mystery%20novel." class="fas fa-eye"></a>
                     </div>
                     <div class="image">
@@ -359,7 +395,11 @@ if (isset($_SESSION['user_id'])) {
                 <div class="swiper-slide box">
                     <div class="icons">
                         <a href="book.php?title=Catching%20Fire&author=Suzanne%20Collins&price=1084.365&image=catchingfire.jpg&description=The%20second%20book%20in%20The%20Hunger%20Games%20trilogy." class="fas fa-search"></a>
-                        <a href="#" class="fas fa-heart"></a>
+                        <!-- MODIFIED: Added add-to-wishlist class and data attributes -->
+                        <a href="#" class="fas fa-heart add-to-wishlist"
+                           data-title="Catching Fire"
+                           data-price="1084.365"
+                           data-img="catchingfire.jpg"></a>
                         <a href="book.php?title=Catching%20Fire&author=Suzanne%20Collins&price=1084.365&image=catchingfire.jpg&description=The%20second%20book%20in%20The%20Hunger%20Games%20trilogy." class="fas fa-eye"></a>
                     </div>
                     <div class="image">
@@ -385,7 +425,11 @@ if (isset($_SESSION['user_id'])) {
                 <div class="swiper-slide box">
                     <div class="icons">
                         <a href="book.php?title=Icebreaker&author=Hannah%20Grace&price=1419.365&image=icebreaker.jpg&description=An%20action-packed%20thriller%20with%20elements%20of%20romance." class="fas fa-search"></a>
-                        <a href="#" class="fas fa-heart"></a>
+                        <!-- MODIFIED: Added add-to-wishlist class and data attributes -->
+                        <a href="#" class="fas fa-heart add-to-wishlist"
+                           data-title="Icebreaker"
+                           data-price="1419.365"
+                           data-img="icebreaker.jpg"></a>
                         <a href="book.php?title=Icebreaker&author=Hannah%20Grace&price=1419.365&image=icebreaker.jpg&description=An%20action-packed%20thriller%20with%20elements%20of%20romance." class="fas fa-eye"></a>
                     </div>
                     <div class="image">
@@ -400,7 +444,11 @@ if (isset($_SESSION['user_id'])) {
                 <div class="swiper-slide box">
                     <div class="icons">
                         <a href="book.php?title=Agenda%2021&author=Dustin%20Thomason%20and%20Mark%20Rushton&price=1335.365&image=agend21.jpg&description=A%20dystopian%20action%20thriller%20about%20a%20government's%20plan%20for%20global%20control." class="fas fa-search"></a>
-                        <a href="#" class="fas fa-heart"></a>
+                        <!-- MODIFIED: Added add-to-wishlist class and data attributes -->
+                        <a href="#" class="fas fa-heart add-to-wishlist"
+                           data-title="Agenda 21"
+                           data-price="1335.365"
+                           data-img="agend21.jpg"></a>
                         <a href="book.php?title=Agenda%2021&author=Dustin%20Thomason%20and%20Mark%20Rushton&price=1335.365&image=agend21.jpg&description=A%20dystopian%20action%20thriller%20about%20a%20government's%20plan%20for%20global%20control." class="fas fa-eye"></a>
                     </div>
                     <div class="image">
@@ -415,8 +463,12 @@ if (isset($_SESSION['user_id'])) {
                 <div class="swiper-slide box">
                     <div class="icons">
                         <a href="book.php?title=Divergent&author=Veronica%20Roth&price=1669.365&image=divergent.jpg&description=A%20dystopian%20action%20series%20where%20society%20is%20divided%20into%20factions." class="fas fa-search"></a>
-                        <a href="#" class="fas fa-heart"></a>
-                        <a href="book.php?title=Divergent&author=Veronica%20Roth&price=1669.365&image=divergent.jpg&description=A%20dystopian%20action%20series%20where%20society%20is%20divided%20into%20factions." class="fas fa-eye"></a>
+                        <!-- MODIFIED: Added add-to-wishlist class and data attributes -->
+                        <a href="#" class="fas fa-heart add-to-wishlist"
+                           data-title="Divergent"
+                           data-price="1669.365"
+                           data-img="divergent.jpg"></a>
+                        <a href="https://drive.google.com/file/d/1_SvTav9UPeMgqMh09lz4juAVCNfGjq21/view?usp=sharing" class="fas fa-eye"></a>
                     </div>
                     <div class="image">
                         <img src="divergent.jpg" alt="Divergent">
@@ -430,7 +482,11 @@ if (isset($_SESSION['user_id'])) {
                 <div class="swiper-slide box">
                     <div class="icons">
                         <a href="book.php?title=The%20Sentinel&author=Lee%20Child&price=1419.365&image=the_sentinel.jpg&description=A%20latest%20Jack%20Reacher%20action-thriller%20novel." class="fas fa-search"></a>
-                        <a href="#" class="fas fa-heart"></a>
+                        <!-- MODIFIED: Added add-to-wishlist class and data attributes -->
+                        <a href="#" class="fas fa-heart add-to-wishlist"
+                           data-title="The Sentinel"
+                           data-price="1419.365"
+                           data-img="the_sentinel.jpg"></a>
                         <a href="book.php?title=The%20Sentinel&author=Lee%20Child&price=1419.365&image=the_sentinel.jpg&description=A%20latest%20Jack%20Reacher%20action-thriller%20novel." class="fas fa-eye"></a>
                     </div>
                     <div class="image">
@@ -445,7 +501,11 @@ if (isset($_SESSION['user_id'])) {
                 <div class="swiper-slide box">
                     <div class="icons">
                         <a href="book.php?title=Mockingjay&author=Suzanne%20Collins&price=1419.365&image=mockingjay.jpg&description=The%20final%20book%20in%20The%20Hunger%20Games%20trilogy." class="fas fa-search"></a>
-                        <a href="#" class="fas fa-heart"></a>
+                        <!-- MODIFIED: Added add-to-wishlist class and data attributes -->
+                        <a href="#" class="fas fa-heart add-to-wishlist"
+                           data-title="Mockingjay"
+                           data-price="1419.365"
+                           data-img="mockingjay.jpg"></a>
                         <a href="book.php?title=Mockingjay&author=Suzanne%20Collins&price=1419.365&image=mockingjay.jpg&description=The%20final%20book%20in%20The%20Hunger%20Games%20trilogy." class="fas fa-eye"></a>
                     </div>
                     <div class="image">
@@ -471,7 +531,11 @@ if (isset($_SESSION['user_id'])) {
                 <div class="swiper-slide box">
                     <div class="icons">
                         <a href="book.php?title=They%20Both%20Die%20at%20the%20End&author=Adam%20Silver&price=1251.365&image=they%20both%20die_.jpg&description=A%20heartbreaking%20romantic%20novel%20about%20two%20boys%20who%20find%20love%20on%20their%20last%20day%20alive." class="fas fa-search"></a>
-                        <a href="#" class="fas fa-heart"></a>
+                        <!-- MODIFIED: Added add-to-wishlist class and data attributes -->
+                        <a href="#" class="fas fa-heart add-to-wishlist"
+                           data-title="They Both Die at the End"
+                           data-price="1251.365"
+                           data-img="they_both_die_.jpg"></a>
                         <a href="book.php?title=They%20Both%20Die%20at%20the%20End&author=Adam%20Silver&price=1251.365&image=they%20both%20die_.jpg&description=A%20heartbreaking%20romantic%20novel%20about%20two%20boys%20who%20find%20love%20on%20their%20last%20day%20alive." class="fas fa-eye"></a>
                     </div>
                     <div class="image">
@@ -486,7 +550,11 @@ if (isset($_SESSION['user_id'])) {
                 <div class="swiper-slide box">
                     <div class="icons">
                         <a href="book.php?title=Red%20White%20%26%20Royal%20Blue&author=Casey%20McQuiston&price=1419.365&image=redwithe.jpg&description=A%20romantic%20comedy%20about%20the%20First%20Son%20of%20the%20United%20States%20and%20a%20British%20prince." class="fas fa-search"></a>
-                        <a href="#" class="fas fa-heart"></a>
+                        <!-- MODIFIED: Added add-to-wishlist class and data attributes -->
+                        <a href="#" class="fas fa-heart add-to-wishlist"
+                           data-title="Red White & Royal Blue"
+                           data-price="1419.365"
+                           data-img="redwithe.jpg"></a>
                         <a href="book.php?title=Red%20White%20%26%20Royal%20Blue&author=Casey%20McQuiston&price=1419.365&image=redwithe.jpg&description=A%20romantic%20comedy%20about%20the%20First%20Son%20of%20the%20United%20States%20and%20a%20British%20prince." class="fas fa-eye"></a>
                     </div>
                     <div class="image">
@@ -501,7 +569,11 @@ if (isset($_SESSION['user_id'])) {
                 <div class="swiper-slide box">
                     <div class="icons">
                         <a href="book.php?title=Ugly%20Love&author=Colleen%20Hoover&price=1836.365&image=ugly_love.jpg&description=A%20captivating%20romantic%20novel%20about%20love%2C%20heartbreak%2C%20and%20the%20truth." class="fas fa-search"></a>
-                        <a href="#" class="fas fa-heart"></a>
+                        <!-- MODIFIED: Added add-to-wishlist class and data attributes -->
+                        <a href="#" class="fas fa-heart add-to-wishlist"
+                           data-title="Ugly Love"
+                           data-price="1836.365"
+                           data-img="ugly_love.jpg"></a>
                         <a href="book.php?title=Ugly%20Love&author=Colleen%20Hoover&price=1836.365&image=ugly_love.jpg&description=A%20captivating%20romantic%20novel%20about%20love%2C%20heartbreak%2C%20and%20the%20truth." class="fas fa-eye"></a>
                     </div>
                     <div class="image">
@@ -516,7 +588,11 @@ if (isset($_SESSION['user_id'])) {
                 <div class="swiper-slide box">
                     <div class="icons">
                         <a href="book.php?title=Wish%20You%20Were%20Here&author=Jodi%20Picoult&price=1670.00&image=wish_you_were_here.jpg&description=A%20moving%20romantic%20story%20of%20love%20and%20loss." class="fas fa-search"></a>
-                        <a href="#" class="fas fa-heart"></a>
+                        <!-- MODIFIED: Added add-to-wishlist class and data attributes -->
+                        <a href="#" class="fas fa-heart add-to-wishlist"
+                           data-title="Wish You Were Here"
+                           data-price="1670.00"
+                           data-img="wish_you_were_here.jpg"></a>
                         <a href="book.php?title=Wish%20You%20Were%20Here&author=Jodi%20Picoult&price=1670.00&image=wish_you_were_here.jpg&description=A%20moving%20romantic%20story%20of%20love%20and%20loss." class="fas fa-eye"></a>
                     </div>
                     <div class="image">
@@ -531,7 +607,11 @@ if (isset($_SESSION['user_id'])) {
                 <div class="swiper-slide box">
                     <div class="icons">
                         <a href="book.php?title=The%20Notebook&author=Nicholas%20Sparks&price=1251.365&image=the_notebook.jpg&description=A%20classic%20romantic%20novel%20about%20an%20unforgettable%20love%20story." class="fas fa-search"></a>
-                        <a href="#" class="fas fa-heart"></a>
+                        <!-- MODIFIED: Added add-to-wishlist class and data attributes -->
+                        <a href="#" class="fas fa-heart add-to-wishlist"
+                           data-title="The Notebook"
+                           data-price="1251.365"
+                           data-img="the_notebook.jpg"></a>
                         <a href="book.php?title=The%20Notebook&author=Nicholas%20Sparks&price=1251.365&image=the_notebook.jpg&description=A%20classic%20romantic%20novel%20about%20an%20unforgettable%20love%20story." class="fas fa-eye"></a>
                     </div>
                     <div class="image">
@@ -557,7 +637,11 @@ if (isset($_SESSION['user_id'])) {
                 <div class="swiper-slide box">
                     <div class="icons">
                         <a href="book.php?title=One%20Hundred%20Years%20of%20Solitude&author=Gabriel%20Garcia%20Marquez&price=1503.165&image=one_hundret_years.jpg&description=A%20masterpiece%20of%20magical%20realism%20and%20a%20classic%20of%20world%20literature." class="fas fa-search"></a>
-                        <a href="#" class="fas fa-heart"></a>
+                        <!-- MODIFIED: Added add-to-wishlist class and data attributes -->
+                        <a href="#" class="fas fa-heart add-to-wishlist"
+                           data-title="One Hundred Years of Solitude"
+                           data-price="1503.165"
+                           data-img="one_hundret_years.jpg"></a>
                         <a href="book.php?title=One%20Hundred%20Years%20of%20Solitude&author=Gabriel%20Garcia%20Marquez&price=1503.165&image=one_hundret_years.jpg&description=A%20masterpiece%20of%20magical%20realism%20and%20a%20classic%20of%20world%20literature." class="fas fa-eye"></a>
                     </div>
                     <div class="image">
@@ -572,7 +656,11 @@ if (isset($_SESSION['user_id'])) {
                 <div class="swiper-slide box">
                     <div class="icons">
                         <a href="book.php?title=The%20Great%20Gatsby&author=F.%20Scott%20Fitzgerald&price=1251.365&image=great_gatsby.jpg&description=A%20classic%20American%20novel%20exploring%20the%20American%20Dream." class="fas fa-search"></a>
-                        <a href="#" class="fas fa-heart"></a>
+                        <!-- MODIFIED: Added add-to-wishlist class and data attributes -->
+                        <a href="#" class="fas fa-heart add-to-wishlist"
+                           data-title="The Great Gatsby"
+                           data-price="1251.365"
+                           data-img="great_gatsby.jpg"></a>
                         <a href="book.php?title=The%20Great%20Gatsby&author=F.%20Scott%20Fitzgerald&price=1251.365&image=great_gatsby.jpg&description=A%20classic%20American%20novel%20exploring%20the%20American%20Dream." class="fas fa-eye"></a>
                     </div>
                     <div class="image">
@@ -587,7 +675,11 @@ if (isset($_SESSION['user_id'])) {
                 <div class="swiper-slide box">
                     <div class="icons">
                         <a href="book.php?title=Hamlet&author=William%20Shakespeare&price=1586.365&image=hamletii.jpg&description=A%20tragic%20play%20by%20William%20Shakespeare%20and%20a%20timeless%20classic." class="fas fa-search"></a>
-                        <a href="#" class="fas fa-heart"></a>
+                        <!-- MODIFIED: Added add-to-wishlist class and data attributes -->
+                        <a href="#" class="fas fa-heart add-to-wishlist"
+                           data-title="Hamlet"
+                           data-price="1586.365"
+                           data-img="hamletii.jpg"></a>
                         <a href="book.php?title=Hamlet&author=William%20Shakespeare&price=1586.365&image=hamletii.jpg&description=A%20tragic%20play%20by%20William%20Shakespeare%20and%20a%20timeless%20classic." class="fas fa-eye"></a>
                     </div>
                     <div class="image">
@@ -602,7 +694,11 @@ if (isset($_SESSION['user_id'])) {
                 <div class="swiper-slide box">
                     <div class="icons">
                         <a href="book.php?title=The%20Divine%20Comedy&author=Dante%20Alighieri&price=1670.00&image=the_divine_comedy.jpg&description=An%20epic%20poem%20by%20Dante%20Alighieri%20and%20a%20literary%20masterpiece." class="fas fa-search"></a>
-                        <a href="#" class="fas fa-heart"></a>
+                        <!-- MODIFIED: Added add-to-wishlist class and data attributes -->
+                        <a href="#" class="fas fa-heart add-to-wishlist"
+                           data-title="The Divine Comedy"
+                           data-price="1670.00"
+                           data-img="the_divine_comedy.jpg"></a>
                         <a href="book.php?title=The%20Divine%20Comedy&author=Dante%20Alighieri&price=1670.00&image=the_divine_comedy.jpg&description=An%20epic%20poem%20by%20Dante%20Alighieri%20and%20a%20literary%20masterpiece." class="fas fa-eye"></a>
                     </div>
                     <div class="image">
@@ -617,7 +713,11 @@ if (isset($_SESSION['user_id'])) {
                 <div class="swiper-slide box">
                     <div class="icons">
                         <a href="book.php?title=The%20Iliad&author=Homer&price=1670.00&image=iliad.jpg&description=An%20ancient%20Greek%20epic%20poem%20and%20a%20foundational%20work%20of%20Western%20literature." class="fas fa-search"></a>
-                        <a href="#" class="fas fa-heart"></a>
+                        <!-- MODIFIED: Added add-to-wishlist class and data attributes -->
+                        <a href="#" class="fas fa-heart add-to-wishlist"
+                           data-title="The Iliad"
+                           data-price="1670.00"
+                           data-img="iliad.jpg"></a>
                         <a href="book.php?title=The%20Iliad&author=Homer&price=1670.00&image=iliad.jpg&description=An%20ancient%20Greek%20epic%20poem%20and%20a%20foundational%20work%20of%20Western%20literature." class="fas fa-eye"></a>
                     </div>
                     <div class="image">
@@ -643,7 +743,11 @@ if (isset($_SESSION['user_id'])) {
                 <div class="swiper-slide box">
                     <div class="icons">
                         <a href="book.php?title=The%20Final%20Empire&author=Brandon%20Sanderson&price=1167.365&image=the_final_empire.jpg&description=The%20first%20novel%20in%20the%20Mistborn%20fantasy%20series." class="fas fa-search"></a>
-                        <a href="#" class="fas fa-heart"></a>
+                        <!-- MODIFIED: Added add-to-wishlist class and data attributes -->
+                        <a href="#" class="fas fa-heart add-to-wishlist"
+                           data-title="The Final Empire"
+                           data-price="1167.365"
+                           data-img="the_final_empire.jpg"></a>
                         <a href="book.php?title=The%20Final%20Empire&author=Brandon%20Sanderson&price=1167.365&image=the_final_empire.jpg&description=The%20first%20novel%20in%20the%20Mistborn%20fantasy%20series." class="fas fa-eye"></a>
                     </div>
                     <div class="image">
@@ -658,7 +762,11 @@ if (isset($_SESSION['user_id'])) {
                 <div class="swiper-slide box">
                     <div class="icons">
                         <a href="book.php?title=The%20Name%20of%20the%20Wind&author=Patrick%20Rothfuss&price=1419.365&image=the_name_of_the_wind.jpg&description=The%20first%20book%20in%20The%20Kingkiller%20Chronicle%20fantasy%20series." class="fas fa-search"></a>
-                        <a href="#" class="fas fa-heart"></a>
+                        <!-- MODIFIED: Added add-to-wishlist class and data attributes -->
+                        <a href="#" class="fas fa-heart add-to-wishlist"
+                           data-title="The Name of the Wind"
+                           data-price="1419.365"
+                           data-img="the_name_of_the_wind.jpg"></a>
                         <a href="book.php?title=The%20Name%20of%20the%20Wind&author=Patrick%20Rothfuss&price=1419.365&image=the_name_of_the_wind.jpg&description=A%20first%20book%20in%20The%20Kingkiller%20Chronicle%20fantasy%20series." class="fas fa-eye"></a>
                     </div>
                     <div class="image">
@@ -673,7 +781,11 @@ if (isset($_SESSION['user_id'])) {
                 <div class="swiper-slide box">
                     <div class="icons">
                         <a href="book.php?title=Harry%20Potter%20and%20the%20Sorcerer's%20Stone&author=J.K.%20Rowling&price=1503.165&image=harry_poter.jpg&description=The%20first%20book%20in%20the%20beloved%20Harry%20Potter%20fantasy%20series." class="fas fa-search"></a>
-                        <a href="#" class="fas fa-heart"></a>
+                        <!-- MODIFIED: Added add-to-wishlist class and data attributes -->
+                        <a href="#" class="fas fa-heart add-to-wishlist"
+                           data-title="Harry Potter"
+                           data-price="1503.165"
+                           data-img="harry_poter.jpg"></a>
                         <a href="book.php?title=Harry%20Potter%20and%20the%20Sorcerer's%20Stone&author=J.K.%20Rowling&price=1503.165&image=harry_poter.jpg&description=The%20first%20book%20in%20the%20beloved%20Harry%20Potter%20fantasy%20series." class="fas fa-eye"></a>
                     </div>
                     <div class="image">
@@ -688,7 +800,11 @@ if (isset($_SESSION['user_id'])) {
                 <div class="swiper-slide box">
                     <div class="icons">
                         <a href="book.php?title=The%20Lord%20of%20the%20Rings&author=J.R.R.%20Tolkien&price=1003.165&image=the_lord_of_the_rings.jpg&description=A%20classic%20high%20fantasy%20novel%20series%20set%20in%20Middle-earth." class="fas fa-search"></a>
-                        <a href="#" class="fas fa-heart"></a>
+                        <!-- MODIFIED: Added add-to-wishlist class and data attributes -->
+                        <a href="#" class="fas fa-heart add-to-wishlist"
+                           data-title="The Lord of the Rings"
+                           data-price="1003.165"
+                           data-img="the_lord_of_the_rings.jpg"></a>
                         <a href="book.php?title=The%20Lord%20of%20the%20Rings&author=J.R.R.%20Tolkien&price=1003.165&image=the_lord_of_the_rings.jpg&description=A%20classic%20high%20fantasy%20novel%20series%20set%20in%20Middle-earth." class="fas fa-eye"></a>
                     </div>
                     <div class="image">
@@ -703,7 +819,11 @@ if (isset($_SESSION['user_id'])) {
                 <div class="swiper-slide box">
                     <div class="icons">
                         <a href="book.php?title=The%20Witcher&author=Andrzej%20Sapkowski&price=1250.00&image=the_witcher.jpg&description=A%20fantasy%20series%20following%20the%20adventures%20of%20Geralt%20of%20Rivia." class="fas fa-search"></a>
-                        <a href="#" class="fas fa-heart"></a>
+                        <!-- MODIFIED: Added add-to-wishlist class and data attributes -->
+                        <a href="#" class="fas fa-heart add-to-wishlist"
+                           data-title="The Witcher"
+                           data-price="1250.00"
+                           data-img="the_witcher.jpg"></a>
                         <a href="book.php?title=The%20Witcher&author=Andrzej%20Sapkowski&price=1250.00&image=the_witcher.jpg&description=A%20fantasy%20series%20following%20the%20adventures%20of%20Geralt%20of%20Rivia." class="fas fa-eye"></a>
                     </div>
                     <div class="image">
@@ -865,6 +985,53 @@ if (isset($_SESSION['user_id'])) {
                 }
             });
         });
+
+        // NEW: Add to Wishlist functionality with AJAX
+        document.querySelectorAll('.add-to-wishlist').forEach(btn => {
+            btn.addEventListener('click', async function(e) {
+                e.preventDefault(); // Prevent the default anchor link behavior
+
+                const title = this.getAttribute('data-title');
+                const priceRaw = this.getAttribute('data-price');
+                const img = this.getAttribute('data-img');
+
+                // Clean the price: remove any character that is not a digit or a dot.
+                const price = priceRaw.replace(/[^0-9.]/g, ''); 
+
+                // Create FormData object to send data.
+                const formData = new FormData();
+                formData.append('title', title);
+                formData.append('price', price);
+                formData.append('img', img);
+
+                try {
+                    // Send an asynchronous POST request to add_to_wishlist.php
+                    const response = await fetch('add_to_wishlist.php', {
+                        method: 'POST', // HTTP method
+                        body: formData // The data to send
+                    });
+
+                    // Check if the HTTP response was successful (status code 200-299)
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+
+                    // Parse the JSON response from the PHP script
+                    const result = await response.json(); 
+
+                    // Display a message to the user based on the success status from the PHP response
+                    if (result.success) {
+                        displayMessageModal(result.message, true); // Show success message
+                    } else {
+                        displayMessageModal(result.message, false); // Show error message from PHP
+                    }
+                } catch (error) {
+                    console.error('Error adding to wishlist:', error);
+                    displayMessageModal('An unexpected error occurred while adding to wishlist. Please try again.', false);
+                }
+            });
+        });
+
 
         // Event listener for the main cart button (fas fa-shopping-cart) in the header.
         // Currently, it displays a generic message. You can expand this later to fetch and display

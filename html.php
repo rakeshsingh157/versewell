@@ -100,7 +100,7 @@ if (isset($_SESSION['user_id'])) {
         <div class="header-2">
             <nav class="navbar">
                 <a href="#home">home</a>
-                <a href="#featured">featured</a>
+                <a href="other.php">featured</a>
                 <a href="html3.php">blogs</a>
                 <a href='html2.php' alt='Broken links'>genres</a>
             </nav>
